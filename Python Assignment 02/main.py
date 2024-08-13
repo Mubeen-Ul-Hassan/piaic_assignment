@@ -9,6 +9,7 @@ Calculate the sum of the two numbers.
 Print the total sum with an appropriate message.
 """
 
+
 first_number = int(input("Enter your first number: "))
 second_number = int(input("Enter your second number: "))
 
@@ -71,4 +72,49 @@ Create a program using list method to add the elements of list2 to list1.
 list_1 = [1, 2, 3]
 list_2 = [4, 5, 6]
 
-print(list_2.append(list_1))
+print([list_1[0]+list_2[0], list_1[1]+list_2[1], list_1[2]+list_2[2]])
+
+
+"""
+You have a list named items with the elements [10, 20, 30, 40]. If you use the pop method without any arguments, what will the list look like and what value will be removed?
+"""
+
+number_list = [10, 20, 30, 40]
+
+print(f"Pop method: {number_list.pop()}")
+
+"""
+You have a list called colors with the elements ['red', 'blue', 'green', 'yellow']. If you use the index method to find the position of 'green', what will the index be?
+"""
+
+color_list = ['red', 'blue', 'green', 'yellow']
+print(f"Green color index: {color_list.index('green')}")
+
+# Challenge Questions
+
+"""
+Fill out the function get_last_element(lst) which takes in a list lst as a parameter and prints the last element in the list. The list is guaranteed to be non-empty, but there are no guarantees on its length.
+"""
+
+def get_last_element(list):
+    if len(list) == 0:
+        return None
+    return list[len(list)-1]
+
+
+print(f"List last item index: {get_last_element([1,2,3,4,5])}")
+
+"""
+ Write a program which continuously asks the user to enter values which are added one by one into a list. When the user presses enter without typing anything, print the list.
+"""
+
+def countinuously_ask():
+    list = []
+    while True:
+        value = input("Enter a value: ")
+        if value.isdigit():
+            list.append(value)
+        else:
+            return list
+        
+print(countinuously_ask())
